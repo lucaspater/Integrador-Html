@@ -1,18 +1,62 @@
 @import './variables/main';
 
-@include resetStyles
+@include resetStyles;
 
 body{
-    width: 1200px;
     background-image: url(../logos/fondobody.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 header{
-    width: 70%;
-    :nth-child(1){
-        width: 600px;
-        height: 450px;
+    display: flex;
+    justify-content: center;
+
+    .principalWrapper{
+        @include orderFlex(row, space-between, center)
     }
+    div{
+        width: 70%;
+    }
+    .tipografia{
+        @include imageSize(23rem,auto)
+    }
+
+    nav{
+        width: 50%;
+        ul{
+            @include orderFlex(row, space-between, center)
+        }
+
+        li{
+            text-transform: uppercase;
+
+            a{
+                color: whitesmoke;
+                font-weight: 500;
+                font-size: 1rem;
+
+                &:hover{
+                    color: gray;
+                    text-decoration: underline;
+                    text-underline-position: below;
+                }
+            }
+        }
+    }
+}
+
+.nosotros{
+    display: flex;
+    justify-content: center;
+
+    .principalWrapper{
+        @include orderFlex(row,center,center)
+    }
+    div{
+       img{
+           @include imageSize(100%,auto)
+       }
+    }
+
 }
