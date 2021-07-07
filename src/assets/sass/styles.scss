@@ -13,17 +13,17 @@ header{
     justify-content: center;
 
     .principalWrapper{
-        @include orderFlex(row, space-between, center)
+        @include orderFlex(row, space-between, center);
     }
     div{
         width: 70%;
     }
     .tipografia{
-        @include imageSize(23rem,auto)
+        @include imageSize(18rem,auto)
     }
 
     nav{
-        width: 50%;
+        width: 60%;
         ul{
             @include orderFlex(row, space-between, center)
         }
@@ -38,6 +38,7 @@ header{
 
                 &:hover{
                     color: gray;
+                    font-weight: bolder;
                     text-decoration: underline;
                     text-underline-position: below;
                 }
@@ -51,12 +52,50 @@ header{
     justify-content: center;
 
     .principalWrapper{
-        @include orderFlex(row,center,center)
+        width: 75%;
     }
     div{
        img{
-           @include imageSize(100%,auto)
+           @include imageSize(100%,auto);
+           border-radius: 5%;
        }
     }
 
+    p{
+        text-transform: uppercase;
+        color: whitesmoke;
+        text-align:justify;
+        font-weight: 900;
+        letter-spacing: 3px;
+        line-height: 2rem;
+    }
+
+}
+
+.merch{
+    display: flex;
+    justify-content: center;
+
+    .principalWrapper{
+        margin-top: 3rem;
+        width: 85%;
+        @include orderFlex(row, space-between, center)
+    }
+
+    ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li{
+        h3{
+            color: whitesmoke;
+            margin-bottom: 1rem;
+        }
+        div{
+            width: 200px;
+            height: 230px;
+        }
+    }
 }
