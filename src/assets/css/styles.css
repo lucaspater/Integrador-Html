@@ -75,9 +75,9 @@ header {
   .nosotros p {
     text-transform: uppercase;
     color: whitesmoke;
-    text-align: justify;
+    text-align: center;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 1.4px;
     line-height: 2rem; }
 
 .merch {
@@ -94,9 +94,64 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-around; }
-  .merch li h3 {
+  .merch li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .merch li h3 {
+      color: whitesmoke;
+      margin-bottom: 1rem; }
+    .merch li div {
+      width: 200px;
+      height: 230px; }
+  .merch button {
+    background-color: whitesmoke;
+    padding: .5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer; }
+
+.contacto {
+  display: flex;
+  justify-content: center; }
+  .contacto .principalWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem; }
+  .contacto .mb-3 {
     color: whitesmoke;
-    margin-bottom: 1rem; }
-  .merch li div {
-    width: 200px;
-    height: 230px; }
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600; }
+
+.footer {
+  display: flex;
+  justify-content: center; }
+  .footer .principalWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto; }
+    .footer .principalWrapper h2 {
+      color: whitesmoke;
+      font-size: 3rem;
+      font-weight: 600; }
+    .footer .principalWrapper ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+    .footer .principalWrapper li {
+      margin-top: 3rem; }
+    .footer .principalWrapper a {
+      text-decoration: none;
+      color: whitesmoke; }
+      .footer .principalWrapper a i {
+        font-size: 2rem;
+        color: yellow; }
