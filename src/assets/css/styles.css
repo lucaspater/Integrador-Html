@@ -11,7 +11,7 @@ body {
   width: 100vw;
   max-width: 100%;
   max-height: 100%;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Cardo', serif; }
 
 html {
   scroll-behavior: smooth; }
@@ -58,10 +58,12 @@ header {
         font-weight: 500;
         font-size: 1rem; }
         header nav li a:hover {
-          color: gray;
           font-weight: bolder;
           text-decoration: underline;
-          text-underline-position: below; }
+          text-underline-position: below;
+          box-shadow: 0 3px 5px 0px gray;
+          transform: translateY(-3px) scale(1.05);
+          filter: none; }
 
 .nosotros {
   display: flex;
@@ -71,14 +73,18 @@ header {
   .nosotros div img {
     width: 100%;
     height: auto;
-    border-radius: 5%; }
+    border-radius: 5%;
+    margin-bottom: 3rem; }
   .nosotros p {
     text-transform: uppercase;
     color: whitesmoke;
     text-align: center;
-    font-weight: 900;
+    font-weight: 200;
     letter-spacing: 1.4px;
-    line-height: 2rem; }
+    line-height: 2rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0px 4px 7px 1px gray; }
 
 .merch {
   display: flex;
@@ -89,7 +95,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 3rem; }
   .merch ul {
     width: 100%;
     display: flex;
@@ -126,7 +133,21 @@ header {
     color: whitesmoke;
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 600; }
+    font-weight: 500;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .contacto .form-label {
+    margin-bottom: 2rem; }
+  .contacto .form-control {
+    width: 320px;
+    height: 24px;
+    text-align: center; }
+  .contacto .form-control2 {
+    width: 380px;
+    height: 120px; }
 
 .footer {
   display: flex;
@@ -139,19 +160,33 @@ header {
     width: 70%;
     height: auto; }
     .footer .principalWrapper h2 {
+      margin-top: 4rem;
       color: whitesmoke;
-      font-size: 3rem;
+      font-size: 2.3rem;
       font-weight: 600; }
     .footer .principalWrapper ul {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center; }
-    .footer .principalWrapper li {
-      margin-top: 3rem; }
-    .footer .principalWrapper a {
-      text-decoration: none;
-      color: whitesmoke; }
-      .footer .principalWrapper a i {
+      .footer .principalWrapper ul li {
+        margin-top: 3rem;
+        padding: 1rem; }
+      .footer .principalWrapper ul a {
         font-size: 2rem;
-        color: yellow; }
+        padding: 5px 10px;
+        background-color: black;
+        color: whitesmoke;
+        cursor: pointer;
+        box-shadow: 0 3px 5px 0px gray;
+        transition: .2s; }
+      .footer .principalWrapper ul .facebook:hover {
+        background-color: #3b5999; }
+      .footer .principalWrapper ul .spoty:hover {
+        background-color: green; }
+      .footer .principalWrapper ul .youtube:hover {
+        background-color: #bd081c; }
+      .footer .principalWrapper ul .ig:hover {
+        background-color: #e4405f; }
+      .footer .principalWrapper ul .gmail:hover {
+        background-color: #3b5999; }

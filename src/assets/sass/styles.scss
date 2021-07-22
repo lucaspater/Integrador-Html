@@ -37,10 +37,12 @@ header{
                 font-size: 1rem;
 
                 &:hover{
-                    color: gray;
                     font-weight: bolder;
                     text-decoration: underline;
                     text-underline-position: below;
+                    box-shadow: 0 3px 5px 0px gray;
+                    transform: translateY(-3px) scale(1.05);
+                    filter: none;
                 }
             }
         }
@@ -58,6 +60,7 @@ header{
        img{
            @include imageSize(100%,auto);
            border-radius: 5%;
+           margin-bottom: 3rem;
        }
     }
 
@@ -65,9 +68,12 @@ header{
         text-transform: uppercase;
         color: whitesmoke;
         text-align:center;
-        font-weight: 900;
+        font-weight: 200;
         letter-spacing: 1.4px;
         line-height: 2rem;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        box-shadow: 0px 4px 7px 1px gray;
     }
 
 }
@@ -79,7 +85,8 @@ header{
     .principalWrapper{
         margin-top: 3rem;
         width: 85%;
-        @include orderFlex(row, space-between, center)
+        @include orderFlex(row, space-between, center);
+        margin-bottom: 3rem;
     }
 
     ul{
@@ -125,8 +132,24 @@ header{
         color: whitesmoke;
         text-transform: uppercase;
         font-size: 1rem;
-        font-weight: 600;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        @include orderFlex(column, center, center);
     }
+
+    .form-label{
+        margin-bottom: 2rem;
+    }
+    .form-control{
+        width: 320px;
+        height: 24px;
+        text-align: center;
+    }
+    .form-control2{
+        width: 380px;
+        height: 120px;
+    }
+
 }
 
 .footer{
@@ -139,24 +162,53 @@ header{
         height: auto;
 
         h2{
+            margin-top: 4rem;
             color: whitesmoke;
-            font-size: 3rem;
+            font-size: 2.3rem;
             font-weight: 600;
         }
 
         ul{
             @include orderFlex(row, center, center);
-        }
-        li{
-            margin-top: 3rem;
-        }
-        a{
-            text-decoration: none;
-            color: whitesmoke;
-            i{
-                font-size: 2rem;
-                color: yellow;
+
+            li{
+                margin-top: 3rem;
+                padding: 1rem;
             }
+                a{
+                    font-size: 2rem;
+                    padding: 5px 10px;
+                    background-color: black;
+                    color: whitesmoke;
+                    cursor: pointer;
+                    box-shadow: 0 3px 5px 0px gray;
+                    transition: .2s;
+                }
+                .facebook{
+                    &:hover{
+                        background-color: #3b5999;
+                    }
+                }
+                .spoty{
+                    &:hover{
+                        background-color: green;
+                    }
+                }
+                .youtube{
+                    &:hover{
+                        background-color: #bd081c;
+                    }
+                }
+                .ig{
+                    &:hover{
+                        background-color: #e4405f;
+                    }
+                }
+                .gmail{
+                    &:hover{
+                        background-color: #3b5999;
+                    }
+                }
         }
     }
 }
