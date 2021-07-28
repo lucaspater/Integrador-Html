@@ -84,6 +84,14 @@ header {
     line-height: 2rem;
     padding: 2rem;
     margin-bottom: 3rem; }
+    @media (max-width: 320px) {
+      .nosotros p {
+        text-align: center;
+        font-weight: 100;
+        font-size: 10px;
+        letter-spacing: 1px;
+        line-height: 1rem;
+        margin-bottom: 2rem; } }
 
 .merch {
   display: flex;
@@ -100,6 +108,12 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-around; }
+    @media (max-width: 1200px) {
+      .merch ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; } }
   .merch li {
     display: flex;
     flex-direction: column;
@@ -128,13 +142,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    margin-bottom: 3rem; }
   .contacto .mb-3 {
     color: whitesmoke;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,6 +163,13 @@ header {
   .contacto .form-control2 {
     width: 380px;
     height: 120px; }
+  .contacto button {
+    background-color: whitesmoke;
+    padding: .4rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer; }
 
 .footer {
   display: flex;
@@ -161,7 +183,7 @@ header {
     height: auto;
     margin-bottom: 3rem; }
     .footer .principalWrapper h2 {
-      margin-top: 4rem;
+      margin-top: 5rem;
       color: whitesmoke;
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -187,7 +209,8 @@ header {
         color: whitesmoke;
         cursor: pointer;
         box-shadow: 0 3px 5px 0px #2b2a2a;
-        transition: .2s; }
+        transition: .2s;
+        border-radius: 15%; }
       .footer .principalWrapper ul .facebook:hover {
         background-color: #3b5999; }
       .footer .principalWrapper ul .spoty:hover {
@@ -198,3 +221,15 @@ header {
         background-color: #e4405f; }
       .footer .principalWrapper ul .gmail:hover {
         background-color: #3b5999; }
+
+.dvtop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end; }
+  .dvtop div {
+    width: 150px;
+    height: 150px; }
+    .dvtop div img {
+      width: 100;
+      height: auto; }

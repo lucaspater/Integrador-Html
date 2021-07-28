@@ -73,6 +73,15 @@ header{
         line-height: 2rem;
         padding: 2rem;
         margin-bottom: 3rem;
+
+        @media (max-width: 320px){
+            text-align: center;
+            font-weight: 100;
+            font-size: 10px;
+            letter-spacing: 1px;
+            line-height: 1rem;
+            margin-bottom: 2rem;
+        }
     }
 
 }
@@ -92,6 +101,10 @@ header{
         width: 100%;
         display: flex;
         justify-content: space-around;
+
+        @media (max-width: 1200px) {
+        @include orderFlex(column, space-between, center)
+        }
     }
 
     li{
@@ -125,6 +138,7 @@ header{
     .principalWrapper{
         @include orderFlex(column, center, center);
         margin-top: 4rem;
+        margin-bottom: 3rem;
     }
 
 
@@ -133,7 +147,7 @@ header{
         text-transform: uppercase;
         font-size: 1rem;
         font-weight: 500;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         @include orderFlex(column, center, center);
     }
 
@@ -149,6 +163,14 @@ header{
         width: 380px;
         height: 120px;
     }
+    button{
+        background-color: whitesmoke;
+        padding: .4rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
 
 }
 
@@ -163,7 +185,7 @@ header{
         margin-bottom: 3rem;
 
         h2{
-            margin-top: 4rem;
+            margin-top: 5rem;
             color: whitesmoke;
             text-transform: uppercase;
             font-size: 1.5rem;
@@ -192,6 +214,7 @@ header{
                     cursor: pointer;
                     box-shadow: 0 3px 5px 0px rgb(43, 42, 42);
                     transition: .2s;
+                    border-radius: 15%;
                 }
                 .facebook{
                     &:hover{
@@ -218,6 +241,17 @@ header{
                         background-color: #3b5999;
                     }
                 }
+        }
+    }
+}
+
+.dvtop{
+    @include orderFlex (row, flex-end, flex-end);
+    div{
+        width: 150px;
+        height: 150px;
+        img {
+            @include imageSize(100, auto)
         }
     }
 }
