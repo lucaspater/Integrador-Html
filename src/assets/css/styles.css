@@ -39,13 +39,14 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
-  header div {
-    width: 70%; }
   header .tipografia {
     width: 18rem;
     height: auto; }
   header nav {
     width: 60%; }
+    @media (max-width: 1200px) {
+      header nav {
+        display: none; } }
     header nav ul {
       display: flex;
       flex-direction: row;
@@ -61,9 +62,21 @@ header {
           font-weight: bolder;
           text-decoration: underline;
           text-underline-position: below;
-          box-shadow: 0 3px 5px 0px gray;
+          box-shadow: 0 3px 5px 0px white;
           transform: translateY(-3px) scale(1.05);
           filter: none; }
+  header .dropdown-toggle {
+    width: 7rem;
+    background: transparent;
+    border: none;
+    margin-left: 3rem; }
+    @media (min-width: 1200px) {
+      header .dropdown-toggle {
+        display: none; } }
+  header .dropdown-menu {
+    background-color: #131212; }
+    header .dropdown-menu a {
+      color: whitesmoke; }
 
 .nosotros {
   display: flex;
@@ -119,6 +132,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 1200px) {
+      .merch li {
+        margin-bottom: 2rem; } }
     .merch li h3 {
       color: whitesmoke;
       margin-bottom: 1rem;

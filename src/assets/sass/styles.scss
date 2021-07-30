@@ -15,15 +15,18 @@ header{
     .principalWrapper{
         @include orderFlex(row, space-between, center);
     }
-    div{
-        width: 70%;
-    }
+
     .tipografia{
         @include imageSize(18rem,auto)
     }
 
     nav{
         width: 60%;
+
+        @media (max-width: 1200px){
+            display: none;
+        }
+
         ul{
             @include orderFlex(row, space-between, center)
         }
@@ -40,11 +43,29 @@ header{
                     font-weight: bolder;
                     text-decoration: underline;
                     text-underline-position: below;
-                    box-shadow: 0 3px 5px 0px gray;
+                    box-shadow: 0 3px 5px 0px white;
                     transform: translateY(-3px) scale(1.05);
                     filter: none;
                 }
             }
+        }
+    }
+
+    .dropdown-toggle{
+        width: 7rem;
+        background: transparent;
+        border: none;
+        margin-left: 3rem;
+
+        @media (min-width: 1200px){
+            display: none;
+        }
+    }
+
+    .dropdown-menu{
+        background-color: rgb(19, 18, 18);
+        a{
+            color: whitesmoke;
         }
     }
 }
@@ -110,6 +131,9 @@ header{
     li{
         @include orderFlex(column, center, center);
 
+        @media (max-width: 1200px){
+            margin-bottom: 2rem;
+        }
         h3{
             color: whitesmoke;
             margin-bottom: 1rem;
