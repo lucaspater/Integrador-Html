@@ -13,7 +13,7 @@ header{
     justify-content: center;
 
     .principalWrapper{
-        @include orderFlex(row, space-between, center);
+        @include orderFlex(row, space-around, center);
     }
 
     .tipografia{
@@ -49,6 +49,23 @@ header{
                 }
             }
         }
+    }
+
+    .carrito{
+        color: whitesmoke;
+        margin-left: 1rem;
+        margin-top: -0.8rem;
+
+        @media
+       (max-width: 1200px){
+            margin-top: 0;
+            margin-right: 2rem;
+        }
+
+    .carritoIcono{
+        color: whitesmoke;
+        font-size: 1.2rem;
+    }
     }
 
     .dropdown-toggle{
@@ -214,6 +231,8 @@ header{
             text-transform: uppercase;
             font-size: 1.5rem;
             font-weight: 400;
+            cursor: pointer;
+
             &:hover{
                 font-weight: bolder;
                 text-decoration: underline;
