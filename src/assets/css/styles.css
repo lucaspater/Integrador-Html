@@ -72,14 +72,14 @@ header nav li {
 }
 header nav li a {
   color: whitesmoke;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
 }
 header nav li a:hover {
   font-weight: bolder;
   text-decoration: underline;
   text-underline-position: below;
-  box-shadow: 0 3px 5px 0px white;
+  box-shadow: 0 3px 5px 0px grey;
   transform: translateY(-3px) scale(1.05);
   filter: none;
 }
@@ -97,6 +97,11 @@ header .carrito {
 header .carrito .carritoIcono {
   color: whitesmoke;
   font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+header span {
+  color: whitesmoke;
+  margin-top: -0.8rem;
 }
 header .dropdown-toggle {
   width: 7rem;
@@ -133,7 +138,7 @@ header .dropdown-menu a {
   text-transform: uppercase;
   color: whitesmoke;
   text-align: center;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 1.4px;
   line-height: 2rem;
   padding: 2rem;
@@ -148,9 +153,6 @@ header .dropdown-menu a {
     line-height: 1rem;
     margin-bottom: 2rem;
   }
-}
-.nosotros h1 {
-  color: orange;
 }
 
 .merch {
@@ -193,11 +195,17 @@ header .dropdown-menu a {
 .merch li h3 {
   color: whitesmoke;
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 .merch li div {
   width: 200px;
   height: 230px;
+}
+.merch span {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 .merch button {
   background-color: whitesmoke;
@@ -206,6 +214,55 @@ header .dropdown-menu a {
   font-weight: 600;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+.cartList {
+  display: flex;
+  justify-content: center;
+}
+.cartList .principalWrapper {
+  margin-top: 3rem;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.cartList h2 {
+  color: whitesmoke;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.cartList span {
+  color: whitesmoke;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  line-height: 2rem;
+  padding: 0.5rem;
+}
+.cartList .emptyProductsMessage {
+  color: whitesmoke;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.cartList .total-items {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.cartList button {
+  background-color: whitesmoke;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.total-items {
+  margin-bottom: 1rem;
 }
 
 .contacto {
@@ -223,8 +280,8 @@ header .dropdown-menu a {
 .contacto .mb-3 {
   color: whitesmoke;
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 400;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -245,10 +302,11 @@ header .dropdown-menu a {
 }
 .contacto button {
   background-color: whitesmoke;
-  padding: 0.4rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   border-radius: 1rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 

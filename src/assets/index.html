@@ -7,6 +7,7 @@
     <link rel="stylesheet"  href="http://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/main.js">
     <title>DEL VENTO</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
        <nav>
            <ul>
                <li><a href="#nosotros">Nosotros</a></li>
-               <li><a href="#merch">Merch</a></li>
+               <li><a href="#listProducts">Merch</a></li>
                <li><a href="#contacto">Contacto</a></li>
                <li><a href="#redes">Redes</a></li>
            </ul>
@@ -35,21 +36,21 @@
             <li><a href="#redes">Redes</a></li>
         </ul>
       </div>
-      <div class="carrito"><a href="blank" class="carritoIcono" ><i class="fas fa-shopping-cart"></i></a></i></div>
+      <div class="carrito" id="cart"><a href="#listProducts" class="carritoIcono" ><i class="fas fa-shopping-cart"></i></a></i></div>
+      <span id="totalItems"></span>
     </div>
 </header>
 
 <section class="nosotros" id="nosotros">
     <div class="principalWrapper">
         <p>Del Vento nace en 2016. Banda de Rock compuesta por Juan Manuel Farias Pinto (gtr+voz), ezequiel poli (bateria+coros), tomas semelis (gtr) y lucas paternoster (bajo). Influencias: bandas nacionales como "la renga", "divididos" o internacionales como "foo fighters". Ya se encuenta disponible el nuevo ep "a todos lados con vos".</p>
-        <h1>HOLAmanolasss</h1>
         <div>
             <img src="./fotos/makena.jpg" alt="">
         </div>
     </div>
 </section>
 
-<section class="merch" id="merch">
+<section class="merch" id="listProducts">
     <div class="principalWrapper">
         <ul>
             <li>
@@ -57,23 +58,45 @@
                     <img src="./logos/myvan.jpg" alt="myvan">
                 </div>
                 <h3>Morir y Volver a Nacer</h3>
-                <button>COMPRAR</button>
+                <span>$500</span>
+                <button onclick="{addProduct('Morir y Volver a Nacer', 500, 1)}">COMPRAR</button>
             </li>
             <li>
                 <div>
                     <img src="./logos/atlcv.jpg" alt="atlcv">
                 </div>
                 <h3>A Todos Lados Con Vos</h3>
-                <button>COMPRAR</button>
+                <span>$400</span>
+                <button button onclick="{addProduct('A Todos Lados Con Vos', 400, 1)}">COMPRAR</button>
             </li>
             <li>
                 <div>
                     <img src="./fotos/ANLSV DV FINAL 300dpi.png" alt="anlsv">
                 </div>
                 <h3>EP A Ningun Lado Sin Vos</h3>
-                <button>COMPRAR</button>
+                <span>$450</span>
+                <button button onclick="{addProduct('EP A Ningun Lado Sin Vos', 450, 1)}">COMPRAR</button>
             </li>
         </ul>
+    </div>
+</section>
+
+</section>
+<section class="cartList" id="cartList">
+    <div class="principalWrapper">
+        <h2>LLEVA TU DISCO!</h2>
+        <div class="cart-wrapper" id="cartWrapper">
+            <div class="emptyProductsMessage">
+                No tienes productos seleccionados
+            </div>
+        </div>
+        <div class="total-items">
+                <span>
+                    <strong>TOTAL:</strong>
+                    <span id="totalProducts"></span>$
+                </span>
+        </div>
+        <button>FINALIZAR COMPRA</button>
     </div>
 </section>
 
@@ -111,5 +134,6 @@
     </div>
 </a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../assets/main.js"></script>
 </body>
 </html>
