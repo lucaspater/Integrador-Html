@@ -60,48 +60,26 @@ const addProduct = (product, price, count) => {
 }
 
 //REPRODUCTOR DE MUSICA
+const playSong = document.getElementsByClassName("play")
+const sotpSong = document.getElementsByClassName("stop")
+const volume = document.querySelector('.volume')
+let audio
 
-const songList = [
-    {
-        title: "A Sentir",
-        file: "A Sentir.wav",
-    },
-    {
-        title: "Amore",
-        file: "Amore.wav",
-    },
-    {
-        title: "Morir",
-        file: "Morir.wav",
-    },
-    {
-        title: "Nimbo",
-        file: "Nimbo.wav",
-    },
-    {
-        title: "Volver a Nacer",
-        file: "Volver a Nacer.wav",
-    }
-]
-
-const songs = document.getElementById ('songs')
-
-
-
-const loadSongs = () => {
-    songList.forEach((song, index) => {
-        const li = document.createElement('li')
-        const link = document.createElement('a')
-        link.textContent = song.title
-        link.href = '#'
-        link.addEventListener('click',() => loadSong(index))
-        li.appendChild(link)
-        songs.appendChild(li)
+for(elemento of playSong){
+    elemento.addEventListener('click', function(){
+        let song = this.getAttribute('id')
+        audio = new Audio(`./audio/${song}.wav`)
+        audio.play()
     })
 }
 
-const loadSong = (songIndex) => {
-    console.log(songIndex)
+for(elemento of sotpSong){
+    elemento.addEventListener('click', function(){
+        audio.pause()
+    })
 }
 
-loadSongs()
+volume.addEventListener('click', function(){
+    let vol = this.value
+    audio.volume = vol
+})
